@@ -1,0 +1,23 @@
+{
+  "name": "pinecherry",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/App.js"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.16.4",
+    "morgan": "~1.9.1"
+  },
+  "main": "server.js",
+  "bin": {
+    "pinecherry": "App.js"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
