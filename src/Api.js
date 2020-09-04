@@ -1,7 +1,8 @@
-// convert requires to ES6
-var api = require('./utils/init');
-var debug = require('debug')('pinecherry:server');
-var http = require('http');
+// convert to ES6
+import api from './utils/init';
+import debug from 'debug';
+// var debug = require('debug')('pinecherry:server');
+import http from 'http';
 
 var port = normalizePort(process.env.PORT || '3000');
 api.set('port', port);

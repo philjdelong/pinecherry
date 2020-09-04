@@ -1,15 +1,21 @@
 "use strict";
 
-// convert requires to ES6
-var api = require('./utils/init');
+var _init = _interopRequireDefault(require("./utils/init"));
 
-var debug = require('debug')('pinecherry:server');
+var _debug = _interopRequireDefault(require("debug"));
 
-var http = require('http');
+var _http = _interopRequireDefault(require("http"));
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// convert to ES6
+// var debug = require('debug')('pinecherry:server');
 var port = normalizePort(process.env.PORT || '3000');
-api.set('port', port);
-var server = http.createServer(api);
+
+_init.default.set('port', port);
+
+var server = _http.default.createServer(_init.default);
+
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
@@ -56,5 +62,5 @@ function onError(error) {
 function onListening() {
   var addr = server.address();
   var bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+  (0, _debug.default)('Listening on ' + bind);
 }
