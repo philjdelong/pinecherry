@@ -1,8 +1,12 @@
 "use strict";
 
-var express = require('express');
+var _express = _interopRequireDefault(require("express"));
 
-var router = express.Router();
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const router = _express.default.Router(); // Include functionality for User Login
+
+
 router.post('/init', (req, res) => {
   res.json({
     status: 'OK',
